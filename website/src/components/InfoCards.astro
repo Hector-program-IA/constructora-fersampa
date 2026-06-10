@@ -5,12 +5,12 @@ const cards = [
   {
     icon: "target",
     title: "Misión",
-    text: "Nuestra misión es brindar soluciones integrales en construcción con los más altos estándares de calidad, seguridad y sostenibilidad. Nos comprometemos a generar valor en cada etapa de nuestros proyectos, superando las expectativas de nuestros clientes y promoviendo el desarrollo continuo de nuestro equipo, la excelencia operativa y la integridad en los entornos donde participamos.",
+    text: "Brindamos soluciones integrales en construcción con los más altos estándares de calidad, seguridad y sostenibilidad.<br /><br />Nos comprometemos a generar valor en cada etapa de nuestros proyectos.<br /><br />Superamos las expectativas de nuestros clientes y promovemos el desarrollo continuo de nuestro equipo, la excelencia operativa y la integridad de los entornos en los que participamos.",
   },
   {
     icon: "vision",
     title: "Visión",
-    text: "Nuestra visión es ser la primera opción para nuestros clientes en el sector de la construcción, siendo reconocidos internacionalmente por nuestra capacidad de transformar ideas en proyectos exitosos y de alto impacto. Aspiramos a destacar por nuestra innovación, calidad y compromiso con la sostenibilidad, generando valor duradero en la industria y en las comunidades donde operamos.",
+    text: "Ser la primera opción para nuestros clientes en el sector industrial.<br /><br />Buscamos ser reconocidos local y nacionalmente por nuestra capacidad de transformar ideas en proyectos exitosos y de alto impacto.<br /><br />Nos destacamos por nuestra innovación y calidad, generando un valor agregado a la industria en soluciones.",
   },
 ];
 ---
@@ -29,7 +29,7 @@ const cards = [
               <Icon name={c.icon} size={26} />
             </span>
             <h3 class="card__title">{c.title}</h3>
-            <p class="card__text">{c.text}</p>
+            <p class="card__text" set:html={c.text} />
             {c.link && (
               <a href={c.link} class="card__link">
                 Ver más
